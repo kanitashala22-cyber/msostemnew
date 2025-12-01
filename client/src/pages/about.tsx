@@ -144,6 +144,41 @@ export default function About() {
             </CardContent>
           </Card>
 
+          {/* Ambassadors Section */}
+          <Card className="mb-16 bg-gradient-to-r from-orange-50 to-pink-50 border-none shadow-lg">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-4xl font-bold text-gray-900 mb-2">{t.about.ambassadorTitle}</h2>
+                <p className="text-2xl text-primary font-semibold mb-4">{t.about.ambassadorSubtitle}</p>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
+                  {t.about.ambassadorDesc}
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+                {t.about.ambassadorFeatures.map((feature, index) => (
+                  <div key={index} className="bg-white rounded-lg p-4 shadow-md">
+                    <div className="text-3xl font-bold text-primary mb-2">{index + 1}</div>
+                    <p className="text-gray-700 font-semibold text-sm">{feature}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfdo4Ve5k26qF4pwISa528uNWXTPyN7ysj0xyAjrXTthXPjNw/viewform?usp=header" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button className="bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 text-lg px-8 py-6" data-testid="button-ambassador-apply">
+                    {t.about.becomeAmbassador}
+                  </Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* CTA */}
           <Card className="bg-gradient-to-r from-primary to-secondary border-none shadow-lg text-white">
             <CardContent className="p-12 text-center">

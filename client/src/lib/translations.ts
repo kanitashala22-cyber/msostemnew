@@ -134,6 +134,17 @@ export const translations = {
       joinUs: "Join Our Community",
       joinText: "Be part of a movement that's changing the face of technology. Start learning today and discover the scholarship opportunities that can help you reach your goals.",
       startLearning: "Start Learning Now",
+      ambassadorTitle: "Become a MsoSTEM Ambassador",
+      ambassadorSubtitle: "Join Our Community of Leaders",
+      ambassadorDesc: "Are you passionate about empowering young women in technology? Become part of our ambassador program and help spread the word about MsoSTEM in your community. Ambassadors are leaders who inspire, guide, and mentor other students on their coding journey.",
+      ambassadorFeatures: [
+        "Lead and mentor young women in your community",
+        "Organize local learning groups and workshops",
+        "Connect students with scholarship opportunities",
+        "Build your own portfolio and leadership experience",
+        "Be part of a global network of tech advocates",
+      ],
+      becomeAmbassador: "Apply to Become an Ambassador",
     },
     // Course Page
     course: {
@@ -410,6 +421,17 @@ export const translations = {
       joinUs: "Bashkohu me Komunitetin Tonë",
       joinText: "Bëhu pjesë e një lëvizjeje që po ndryshon fytyrën e teknologjisë. Fillo të mësosh sot dhe zbulo mundësi bursash që mund të të ndihmojnë të arrish qëllimet tuaja.",
       startLearning: "Fillo të Mësosh Tani",
+      ambassadorTitle: "Bëhu Ambasador i MsoSTEM",
+      ambassadorSubtitle: "Bashkohu me Komunitetin e Liderëve",
+      ambassadorDesc: "Je i pasionuar për fuqizimin e grave të reja në teknologji? Bëhu pjesë e programit tonë të ambasadorëve dhe ndihmo në përhapjen e njohurive për MsoSTEM në komunitetin tënd. Ambasadorët janë liderë që inspirojnë, udhëzojnë dhe mentorëzojnë studentë të tjerë në udhëtimin e tyre të kodimit.",
+      ambassadorFeatures: [
+        "Udhëzoni dhe mentorëzoni gra të reja në komunitetin tuaj",
+        "Organizoni grupe lokale të mësimit dhe punëtori",
+        "Lidhni studentët me mundësi bursash",
+        "Ndërtoni portofolin tuaj dhe përvojën e drejtimit",
+        "Bëhu pjesë e rrjetit global të mbrojtësve të teknologjisë",
+      ],
+      becomeAmbassador: "Aplikoni për të Bërë Ambasador",
     },
     // Course Page
     course: {
