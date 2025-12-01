@@ -140,15 +140,6 @@ export default function ScholarshipDetail() {
               />
             </div>
           )}
-          {isUWC && (
-            <div className="mb-8">
-              <img
-                src={uwcImage}
-                alt="International students from diverse backgrounds at UWC campus"
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          )}
 
           {/* TechGirls Specific Content */}
           {isTechGirls ? (
