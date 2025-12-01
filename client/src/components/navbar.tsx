@@ -47,6 +47,13 @@ export default function Navbar() {
             }`} data-testid="link-playground">
               {t.nav.playground}
             </Link>
+            <Link href="/about" className={`font-medium transition-colors duration-300 ${
+              isActive('/about') 
+                ? 'text-primary' 
+                : 'text-gray-700 hover:text-primary'
+            }`} data-testid="link-about">
+              {t.nav.about}
+            </Link>
             <LanguageSwitcher />
             <Button className="bg-primary text-white hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg" data-testid="button-start-learning">
               {t.course.startCourse}
@@ -103,6 +110,18 @@ export default function Navbar() {
               data-testid="link-playground-mobile"
             >
               {t.nav.playground}
+            </Link>
+            <Link 
+              href="/about"
+              className={`block font-medium transition-colors duration-300 ${
+                isActive('/about') 
+                  ? 'text-primary' 
+                  : 'text-gray-700 hover:text-primary'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+              data-testid="link-about-mobile"
+            >
+              {t.nav.about}
             </Link>
             <LanguageSwitcher />
             <Button className="w-full bg-primary text-white hover:bg-primary/90 transition-all duration-300" data-testid="button-start-learning-mobile">
