@@ -291,6 +291,16 @@ export const translations = {
         organizationName: "U.S. Department of State",
       },
       "scholarship-5": {
+        title: "AFS Global You™ Adventurer",
+        description:
+          "Unique 5-week virtual exchange program designed for high school students worldwide. This fully immersive and fully funded program helps participants develop global competence, intercultural communication skills, leadership capacity, and digital collaboration abilities.",
+        field: "Global Citizenship, Leadership, Intercultural Skills",
+        location: "Online/Virtual (from anywhere in the world)",
+        eligibility:
+          "High school students ages 14-17 from any country with internet access",
+        organizationName: "AFS Intercultural Programs",
+      },
+      "scholarship-6": {
         title: "United World Colleges (UWC)",
         description:
           "A global network of selective international schools offering the prestigious UWC curriculum. Study abroad at one of 18 UWC schools worldwide, fostering international cooperation and environmental sustainability through holistic education.",
@@ -299,6 +309,99 @@ export const translations = {
         eligibility:
           "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Competitive admission through national selection committees.",
         organizationName: "United World Colleges International",
+        aboutProgram: {
+          title: "About United World Colleges (UWC)",
+          description:
+            "UWC is a global network of 18 selective international schools serving over 3,500 students from more than 180 countries. They offer the prestigious UWC curriculum, fostering international cooperation and environmental sustainability solutions through holistic education. UWC emphasizes leadership, academic achievement, and responsible citizenship in an interconnected world.",
+          programHighlights: {
+            title: "Program Highlights",
+            items: [
+              "Full academic year (2 years) at international campus",
+              "Education based on multiple pillars: academic, artistic, athletic, and service",
+              "Live on campus with students from 180+ countries",
+              "International Baccalaureate (IB) Curriculum",
+              "Focus on environmental sustainability and global solutions",
+            ],
+          },
+          programComponents: {
+            title: "Program Components",
+            items: [
+              "Integrated academic learning with 4 UWC pillars",
+              "Community service and social responsibility",
+              "Entrepreneurship and innovation development",
+              "Global project exchange at world level",
+              "Mentorship with international leaders",
+            ],
+          },
+        },
+        eligibilityRequirements: {
+          title: "Admission Requirements",
+          basicRequirements: {
+            title: "Basic Requirements",
+            items: [
+              "Ages 16-19 (typically for 2 academic years)",
+              "Citizens of any country",
+              "Strong academic achievement",
+              "Demonstrated leadership potential",
+              "Fluency in English",
+            ],
+          },
+          applicationRequirements: {
+            title: "Application Requirements",
+            items: [
+              "Complete online application",
+              "Academic transcripts",
+              "Essays and personal statement",
+              "Academic recommendation letters",
+              "Interview with national selection committee",
+            ],
+          },
+          selectionCriteria: {
+            title: "Selection Criteria",
+            items: [
+              "Academic achievement",
+              "Leadership potential and character",
+              "Commitment to community",
+              "Fit in international environment",
+              "Vision for the future",
+            ],
+          },
+        },
+        applicationTimeline: {
+          title: "Application Timeline",
+          timeline: {
+            title: "Application Calendar",
+            items: [
+              "Application: November - January",
+              "National interviews: February - March",
+              "Final results: April - May",
+              "Program start: September - October",
+            ],
+          },
+          requirements: {
+            title: "Application Requirements",
+            items: [
+              "Complete online application on UWC website",
+              "Academic transcripts",
+              "Recommendation from national coordinator",
+              "Interview at UWC campus or virtual",
+            ],
+          },
+          selectionProcess: {
+            title: "Selection Process",
+            items: [
+              "Review of applications by national committee",
+              "Interview with selected candidates",
+              "Assessment by UWC leaders and coordinators",
+              "Final selection and admission confirmation",
+            ],
+          },
+        },
+        badgeText: {
+          open: "Open for Applications",
+          upcoming: "Next Application Period",
+          closingSoon: "Closing Soon",
+        },
       },
     },
     // Lesson Content Translations
@@ -1117,7 +1220,7 @@ export const translations = {
           closingSoon: "Mbyllet Së Shpejti",
         },
       },
-      "scholarship-5": {
+      "scholarship-6": {
         title: "United World Colleges (UWC)",
         description:
           "Një rrjet global i shkollave ndërkombëtare selektive që ofrojnë kurrikulum prestigious të UWC. Mëso në jashtëzland në një nga 18 shkolla UWC në të gjithë botën, duke nxitur bashkëpunimin ndërkombëtar dhe qëndrueshmërinë mjedisore përmes edukimit holistik.",
