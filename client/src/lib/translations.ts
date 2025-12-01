@@ -281,6 +281,16 @@ export const translations = {
         organizationName: "U.S. Department of State",
       },
       "scholarship-4": {
+        title: "Future Leaders Exchange (FLEX)",
+        description:
+          "Competitive merit-based scholarship program bringing high school students from Eastern Europe, Eurasia, and Central Asia to study for a full academic year in the United States, living with host families and attending public high schools.",
+        field: "Cultural Exchange, Leadership, Democracy, Entrepreneurship",
+        location: "Public High Schools across the United States",
+        eligibility:
+          "High school students (ages 15-17) from 22 participating countries with strong academic records and demonstrated leadership potential",
+        organizationName: "U.S. Department of State",
+      },
+      "scholarship-5": {
         title: "United World Colleges (UWC)",
         description:
           "A global network of selective international schools offering the prestigious UWC curriculum. Study abroad at one of 18 UWC schools worldwide, fostering international cooperation and environmental sustainability through holistic education.",
@@ -897,18 +907,18 @@ export const translations = {
         },
       },
       "scholarship-4": {
-        title: "United World Colleges (UWC)",
+        title: "Programi i Shkëmbimit të Liderëve të Ardhshëm (FLEX)",
         description:
-          "Një rrjet global i shkollave ndërkombëtare selektive që ofrojnë kurrikulum prestigious të UWC. Mëso në jashtëzland në një nga 18 shkolla UWC në të gjithë botën, duke nxitur bashkëpunimin ndërkombëtar dhe qëndrueshmërinë mjedisore përmes edukimit holistik.",
-        field: "Edukimi Ndërkombëtar, Lidershipi, Qytetësia Globale, Studimet Mjedisore",
-        location: "Kampuse të shumta në të gjithë botën (Singapor, Kanada, Kosta Rika, Tajlanda, India, dhe më shumë)",
+          "Program bursash konkurrues bazuar në merita i financuar nga Departamenti Amerikan i Shtetit që sjell studentë të shkollës së mesme nga Evropa Lindore, Eurazia dhe Azia Qendrore në Shtetet e Bashkuara për një vit të plotë akademik.",
+        field: "Shkëmbim Kulturor, Lidershipi, Demokraci, Sipërmarrje",
+        location: "Shkolla të Mesme Publike në të gjitha Shtetet e Bashkuara",
         eligibility:
-          "Nxënësit e shkollave të mesme (16-19 vjeç) me regjistrime akademike të forta dhe potencial lidershipi të demonstruar. Pranimje konkurrente përmes komiteteve të përzgjedhjes kombëtare.",
-        organizationName: "United World Colleges International",
+          "Nxënësit e shkollave të mesme (15-17 vjeç) nga 22 vende pjesëmarrëse me arritje akademike të forta dhe potencial lidershipi të demonstruar",
+        organizationName: "Departamenti Amerikan i Shtetit",
         aboutProgram: {
-          title: "Rreth United World Colleges (UWC)",
+          title: "Rreth Programit Future Leaders Exchange (FLEX)",
           description:
-            "UWC është një rrjet global i 18 shkollave ndërkombëtare selektive me mbi 3,500 studentë nga më shumë se 180 vende. Ofrojnë kurrikulum prestigious të UWC, duke nxitur bashkëpunimin ndërkombëtar dhe zgjidhjet për qëndrueshmërinë mjedisore përmes edukimit holistik.",
+            "Programi Future Leaders Exchange (FLEX) është një program bursash konkurrues bazuar në merita i financuar nga Departamenti Amerikan i Shtetit që sjell studentë të shkollës së mesme nga Evropa Lindore, Eurazia dhe Azia Qendrore në Shtetet e Bashkuara për një vit të plotë akademik. Me mbi 32,000 ish-studentë që nga viti 1993, FLEX promovon mirëkuptim të ndërsjellë dhe paqe të qëndrueshme përmes shkëmbimit të rinisë.",
           programHighlights: {
             title: "Pikat Kryesore të Programit",
             items: [
@@ -1104,6 +1114,109 @@ export const translations = {
         badgeText: {
           open: "E Hapur për Aplikime",
           upcoming: "Sesionet e Ardhshme Disponibël",
+          closingSoon: "Mbyllet Së Shpejti",
+        },
+      },
+      "scholarship-5": {
+        title: "United World Colleges (UWC)",
+        description:
+          "Një rrjet global i shkollave ndërkombëtare selektive që ofrojnë kurrikulum prestigious të UWC. Mëso në jashtëzland në një nga 18 shkolla UWC në të gjithë botën, duke nxitur bashkëpunimin ndërkombëtar dhe qëndrueshmërinë mjedisore përmes edukimit holistik.",
+        field: "Edukimi Ndërkombëtar, Lidershipi, Qytetësia Globale, Studimet Mjedisore",
+        location: "Kampuse të shumta në të gjithë botën (Singapor, Kanada, Kosta Rika, Tajlanda, India, dhe më shumë)",
+        eligibility:
+          "Nxënësit e shkollave të mesme (16-19 vjeç) me regjistrime akademike të forta dhe potencial lidershipi të demonstruar. Pranimje konkurrente përmes komiteteve të përzgjedhjes kombëtare.",
+        organizationName: "United World Colleges International",
+        aboutProgram: {
+          title: "Rreth United World Colleges (UWC)",
+          description:
+            "UWC është një rrjet global i 18 shkollave ndërkombëtare selektive me mbi 3,500 studentë nga më shumë se 180 vende. Ofrojnë kurrikulum prestigious të UWC, duke nxitur bashkëpunimin ndërkombëtar dhe zgjidhjet për qëndrueshmërinë mjedisore përmes edukimit holistik. UWC vendos presionin ndaj pasurive, arritjes akademike dhe lidershipit përgjegjës në botën globale.",
+          programHighlights: {
+            title: "Pikat Kryesore të Programit",
+            items: [
+              "Vit akademik i plotë (2 vjeç) në kampus ndërkombëtar",
+              "Edukimi bazuar në biletat e shumta: akademik, artistik, atletik, dhe shërbim",
+              "Jetojnë në kampus me studentë nga 180+ vende",
+              "Kurrikulum IB (International Baccalaureate)",
+              "Fokus në qëndrueshmërinë mjedisore dhe zgjidhjet globale",
+            ],
+          },
+          programComponents: {
+            title: "Komponentimet e Programit",
+            items: [
+              "Mësim akademik i integruar me 4 komponentet e UWC",
+              "Shërbim komunitar dhe përgjegjësia shoqërore",
+              "Zhvillim të sipërmarrjeve dhe inovacionit",
+              "Këmbimi i projekteve në nivel botëror",
+              "Mentorshipi me liderë ndërkombëtar",
+            ],
+          },
+        },
+        eligibilityRequirements: {
+          title: "Kushtet e Pranimit",
+          basicRequirements: {
+            title: "Kërkesat Bazë",
+            items: [
+              "Mosha 16-19 (zakonisht për 2 vjet akademik)",
+              "Qytetarë të ndonjë vendi",
+              "Arritje akademike të forta",
+              "Potencial i demonstruar lidershipi",
+              "Fluiditeti në anglisht",
+            ],
+          },
+          applicationRequirements: {
+            title: "Kërkesat për Aplikim",
+            items: [
+              "Plotëso aplikimin online",
+              "Transkripti akademik",
+              "Ese dhe deklarata personale",
+              "Letra rekomandimi akademike",
+              "Intervista me komitetin e përzgjedhjes kombëtare",
+            ],
+          },
+          selectionCriteria: {
+            title: "Kriteret e Përzgjedhjes",
+            items: [
+              "Arritje akademike",
+              "Potencial lidershipi dhe karakter",
+              "Përkushtim ndaj komunitetit",
+              "Përshtatje në mjedis ndërkombëtar",
+              "Vizion për të ardhmen",
+            ],
+          },
+        },
+        applicationTimeline: {
+          title: "Raporti i Aplikimit",
+          timeline: {
+            title: "Kalendari i Aplikimit",
+            items: [
+              "Aplikim: Nëntor - Janar",
+              "Intervista kombëtare: Shkurt - Mars",
+              "Rezultate përfundimtare: Prill - Maj",
+              "Fillim i Programit: Shtator - Tetor",
+            ],
+          },
+          requirements: {
+            title: "Kërkesat për Aplikim",
+            items: [
+              "Plotëso aplikimin online në faqen e internetit të UWC",
+              "Transkripte akademike",
+              "Rekomandim nga koordinatori kombëtar",
+              "Intervista në kampusin UWC ose në distancë",
+            ],
+          },
+          selectionProcess: {
+            title: "Procesi i Përzgjedhjes",
+            items: [
+              "Shqyrtim i aplikimeve nga komisioni kombëtar",
+              "Intervista me kandidatët e zgjedhur",
+              "Vlerësim nga liderët e UWC dhe koordinatorët",
+              "Përzgjedhja dhe konfirmimi i pranimit",
+            ],
+          },
+        },
+        badgeText: {
+          open: "E Hapur për Aplikime",
+          upcoming: "Periudha e Ardhshme e Aplikimit",
           closingSoon: "Mbyllet Së Shpejti",
         },
       },
