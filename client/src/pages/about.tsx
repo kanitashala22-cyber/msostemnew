@@ -126,18 +126,6 @@ export default function About() {
                   </p>
                 </CardContent>
               </Card>
-
-              <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
-                    <Target className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t.about.feature4}</h3>
-                  <p className="text-gray-600">
-                    {t.about.feature4Desc}
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
 
@@ -169,7 +157,7 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="text-center">
+              <div className="text-center mb-8">
                 <a 
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfdo4Ve5k26qF4pwISa528uNWXTPyN7ysj0xyAjrXTthXPjNw/viewform?usp=header" 
                   target="_blank" 
@@ -180,6 +168,26 @@ export default function About() {
                     {t.about.becomeAmbassador}
                   </Button>
                 </a>
+              </div>
+
+              {/* Partner With Us Section */}
+              <div className="border-t pt-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.about.partnerWithUs}</h3>
+                <p className="text-lg text-gray-700 leading-relaxed text-center mb-6">
+                  {t.about.partnerDesc}
+                </p>
+                <div className="text-center">
+                  <a 
+                    href="https://forms.gle/kiz8RWmfMRdQPDFa9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white text-lg px-8 py-4 transition-all duration-300" data-testid="button-partner-with-us">
+                      {t.about.partnerButton}
+                    </Button>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>

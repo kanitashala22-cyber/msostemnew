@@ -145,6 +145,9 @@ export const translations = {
         "Be part of a global network of tech advocates",
       ],
       becomeAmbassador: "Apply to Become an Ambassador",
+      partnerWithUs: "Partner With Us",
+      partnerDesc: "Are you an organization, school, or business interested in supporting MsoSTEM's mission? We welcome partnerships and collaborations to expand our reach and impact. Let's work together to empower more young women in technology.",
+      partnerButton: "Get in Touch",
     },
     // Course Page
     course: {
@@ -568,6 +571,9 @@ export const translations = {
         "Bëhu pjesë e rrjetit global të mbrojtësve të teknologjisë",
       ],
       becomeAmbassador: "Aplikoni për të Bërë Ambasador",
+      partnerWithUs: "Bashkëpunoni me Ne",
+      partnerDesc: "Jeni një organizatë, shkollë ose biznes i interesuar në mbështetjen e misionit të MsoSTEM? Ne mirëpresim bashkëpunimet dhe bashkëpunimet për të zgjeruar arritjen dhe ndikimin tonë. Le të punojmë së bashku për të fuqizuar më shumë gra të reja në teknologji.",
+      partnerButton: "Na Kontaktoni",
     },
     // Course Page
     course: {
