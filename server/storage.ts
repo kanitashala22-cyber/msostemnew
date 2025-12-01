@@ -387,16 +387,16 @@ export class MemStorage implements IStorage {
         id: "scholarship-6",
         title: "United World Colleges (UWC)",
         description:
-          "A global network of 18 selective international schools offering the prestigious UWC curriculum. Study abroad at one of 18 UWC schools worldwide, fostering international cooperation and environmental sustainability through holistic education.",
+          "A global network of 18 selective international schools in countries spanning five continents. UWC offers the prestigious International Baccalaureate (IB) curriculum combined with a unique educational philosophy emphasizing international cooperation, environmental sustainability, and responsible global citizenship. Study for 2 years at one of these elite institutions with students from 180+ countries, developing leadership skills, cross-cultural understanding, and solutions to global challenges.",
         amount: 50000,
         deadline: new Date("2025-12-31"),
         field: "International Education, Leadership, Global Citizenship, Environmental Studies",
-        location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, and more)",
+        location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, Kenya, Jordan, Wales, China, USA, and more)",
         eligibility:
-          "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Competitive admission through national selection committees.",
+          "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Competitive admission through national selection committees. Fluency in English required.",
         status: "upcoming",
         organizationName: "United World Colleges International",
-        applicationUrl: "https://www.uwc.org/apply",
+        applicationUrl: "https://www.uwc.org",
         createdAt: new Date(),
       },
     ];
