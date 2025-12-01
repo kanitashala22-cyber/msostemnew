@@ -9,9 +9,14 @@ import { Link } from "wouter";
 import { Play, Clock, CheckCircle, Rocket, Search, Eye, Code, GraduationCap } from "lucide-react";
 import type { Course, Scholarship } from "@shared/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect } from "react";
 
 export default function Home() {
   const { t } = useLanguage();
+  
+  useEffect(() => {
+    document.title = "MsoSTEM - Learn Programming & Find Scholarships";
+  }, []);
   
   const { data: courses, isLoading: coursesLoading } = useQuery<Course[]>({
     queryKey: ["/api/courses"],

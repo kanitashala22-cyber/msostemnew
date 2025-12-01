@@ -5,9 +5,14 @@ import { Heart, Target, Users, BookOpen, Award, Code } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export default function About() {
   const { t } = useLanguage();
+  
+  useEffect(() => {
+    document.title = "MsoSTEM - About Us";
+  }, []);
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />

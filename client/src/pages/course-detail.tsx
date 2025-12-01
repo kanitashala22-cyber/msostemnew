@@ -28,6 +28,12 @@ export default function CourseDetail() {
     queryKey: ["/api/courses", id],
   });
 
+  useEffect(() => {
+    if (course) {
+      document.title = `MsoSTEM - Learn ${course.title}`;
+    }
+  }, [course]);
+
   // Define lessons by course for better organization
   const HTML_LESSONS = [
           {

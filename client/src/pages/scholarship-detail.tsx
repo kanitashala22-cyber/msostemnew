@@ -1,5 +1,6 @@
 import { useParams } from "wouter"; //
 import { useQuery } from "@tanstack/react-query"; //
+import { useEffect } from "react";
 import Navbar from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,12 @@ export default function ScholarshipDetail() {
   const { data: scholarship, isLoading } = useQuery<Scholarship>({
     queryKey: ["/api/scholarships", id],
   });
+
+  useEffect(() => {
+    if (scholarship) {
+      document.title = `MsoSTEM - ${scholarship.title}`;
+    }
+  }, [scholarship]);
 
   if (isLoading) {
     return (

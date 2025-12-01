@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/navbar";
 import CodeEditor from "@/components/code-editor";
 import Footer from "@/components/footer";
@@ -13,6 +13,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export default function Playground() {
   const { toast } = useToast();
   const { t } = useLanguage();
+  
+  useEffect(() => {
+    document.title = "MsoSTEM - Code Playground";
+  }, []);
   const [htmlCode, setHtmlCode] = useState(`<!DOCTYPE html>
 <html lang="en">
 <head>
