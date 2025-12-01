@@ -5,7 +5,7 @@ export const translations = {
     // Navigation
     nav: {
       courses: "Courses",
-      scholarships: "Scholarships",
+      scholarships: "Exchange Programs",
       playground: "Code Playground",
       about: "About Us",
       language: "Language",
@@ -63,11 +63,11 @@ export const translations = {
         tryPlayground: "Try the Playground",
       },
       scholarships: {
-        title: "Tech Scholarships",
-        titleHighlight: "Scholarships",
+        title: "Study Abroad & Exchange Programs",
+        titleHighlight: "Exchange Programs",
         subtitle:
-          "Discover funding opportunities that can help you pursue your dreams in technology and computer science.",
-        viewAll: "View All Scholarships",
+          "Discover incredible opportunities to study and exchange with top universities around the world. Expand your horizons and experience education in different countries while pursuing your dreams in technology.",
+        viewAll: "View All Programs",
         deadline: "Deadline",
         amount: "Award Amount",
         learnMore: "Learn More",
@@ -93,7 +93,7 @@ export const translations = {
         responsiveDesign: "Responsive Design",
         codePlayground: "Code Playground",
         learningPath: "Learning Path",
-        scholarships: "Scholarships",
+        scholarships: "Exchange Programs",
         community: "Community",
         successStories: "Success Stories",
         mentorship: "Mentorship",
@@ -280,6 +280,16 @@ export const translations = {
           "High school students (ages 15-17) from designated countries with strong academic records",
         organizationName: "U.S. Department of State",
       },
+      "scholarship-4": {
+        title: "United World Colleges (UWC)",
+        description:
+          "A global network of selective international schools offering the prestigious UWC curriculum. Study abroad at one of 18 UWC schools worldwide, fostering international cooperation and environmental sustainability through holistic education.",
+        field: "International Education, Leadership, Global Citizenship, Environmental Studies",
+        location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, and more)",
+        eligibility:
+          "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Competitive admission through national selection committees.",
+        organizationName: "United World Colleges International",
+      },
     },
     // Lesson Content Translations
     lessonContent: {
@@ -292,7 +302,7 @@ export const translations = {
     // Navigation
     nav: {
       courses: "Kurset",
-      scholarships: "Bursat",
+      scholarships: "Programe Shkëmbimi",
       playground: "Hapësira e Kodit",
       about: "Rreth Nesh",
       language: "Gjuha",
@@ -350,11 +360,11 @@ export const translations = {
         tryPlayground: "Provoje",
       },
       scholarships: {
-        title: "Bursa dhe",
+        title: "Mëso në Jashtëzland & Programe Shkëmbimi",
         titleHighlight: "Programe Shkëmbimi",
         subtitle:
-          "Zbulo mundësi financimi që mund të të ndihmojnë të ndjekësh ëndrrat në teknologji dhe shkenca kompjuterike.",
-        viewAll: "Shiko Të Gjitha Bursat",
+          "Zbulo mundësi të mahnitshme për të studiuar dhe këmbyer përvojën me universitetet kryesore në të gjithë botën. Zgjeroji horizontet tuaja dhe përjetoje edukimin në vende të ndryshme ndërsa ndjekësh ëndrrat tuaja në teknologji.",
+        viewAll: "Shiko Të Gjitha Programet",
         deadline: "Afati",
         amount: "Shuma e Çmimit",
         learnMore: "Mëso Më Shumë",
@@ -380,7 +390,7 @@ export const translations = {
         responsiveDesign: "Dizajni Responsive",
         codePlayground: "Hapësira e Kodit",
         learningPath: "Rruga e Mësimit",
-        scholarships: "Bursat",
+        scholarships: "Programe Shkëmbimi",
         community: "Komuniteti",
         successStories: "Histori Suksesi",
         mentorship: "Mentorimi",
@@ -887,18 +897,18 @@ export const translations = {
         },
       },
       "scholarship-4": {
-        title: "Programi i Shkëmbimit të Liderëve të Ardhshëm (FLEX)",
+        title: "United World Colleges (UWC)",
         description:
-          "Program bursash konkurrues bazuar në merita i financuar nga Departamenti Amerikan i Shtetit që sjell studentë të shkollës së mesme nga Evropa, Eurazia dhe Azia Qendrore në Shtetet e Bashkuara për një vit të plotë akademik.",
-        field: "Shkëmbim Kulturor, Udhëheqje, Demokraci",
-        location: "Shkolla të Mesme Publike në të gjitha Shtetet e Bashkuara",
+          "Një rrjet global i shkollave ndërkombëtare selektive që ofrojnë kurrikulum prestigious të UWC. Mëso në jashtëzland në një nga 18 shkolla UWC në të gjithë botën, duke nxitur bashkëpunimin ndërkombëtar dhe qëndrueshmërinë mjedisore përmes edukimit holistik.",
+        field: "Edukimi Ndërkombëtar, Lidershipi, Qytetësia Globale, Studimet Mjedisore",
+        location: "Kampuse të shumta në të gjithë botën (Singapor, Kanada, Kosta Rika, Tajlanda, India, dhe më shumë)",
         eligibility:
-          "Studentë të shkollës së mesme (mosha 15-17) nga 22 vende pjesëmarrëse me arritje të forta akademike",
-        organizationName: "Departamenti Amerikan i Shtetit",
+          "Nxënësit e shkollave të mesme (16-19 vjeç) me regjistrime akademike të forta dhe potencial lidershipi të demonstruar. Pranimje konkurrente përmes komiteteve të përzgjedhjes kombëtare.",
+        organizationName: "United World Colleges International",
         aboutProgram: {
-          title: "Rreth Programit Future Leaders Exchange (FLEX)",
+          title: "Rreth United World Colleges (UWC)",
           description:
-            "Programi Future Leaders Exchange (FLEX) është një program bursash konkurrues bazuar në merita i financuar nga Departamenti Amerikan i Shtetit që sjell studentë të shkollës së mesme nga Evropa, Eurazia dhe Azia Qendrore në Shtetet e Bashkuara për një vit të plotë akademik. Me mbi 32,000 ish-studentë që nga viti 1993, FLEX promovon mirëkuptim të ndërsjellë dhe paqe të qëndrueshme përmes shkëmbimit të rinisë.",
+            "UWC është një rrjet global i 18 shkollave ndërkombëtare selektive me mbi 3,500 studentë nga më shumë se 180 vende. Ofrojnë kurrikulum prestigious të UWC, duke nxitur bashkëpunimin ndërkombëtar dhe zgjidhjet për qëndrueshmërinë mjedisore përmes edukimit holistik.",
           programHighlights: {
             title: "Pikat Kryesore të Programit",
             items: [
