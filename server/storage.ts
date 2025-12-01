@@ -383,21 +383,22 @@ export class MemStorage implements IStorage {
         applicationUrl: "https://afs.org/adventurer/",
         createdAt: new Date(),
       },
-      /* {
+      {
         id: "scholarship-6",
-        title: "Outstanding Achievement Award",
+        title: "United World Colleges (UWC)",
         description:
-          "Recognizing exceptional academic achievement and community impact in technology education.",
-        amount: 15000,
-        deadline: new Date("2024-01-31"),
-        field: "Computer Science, Engineering",
-        location: "International",
-        eligibility: "High-achieving students with community impact",
-        status: "closed",
-        organizationName: "Achievement Recognition Foundation",
-        applicationUrl: "https://example.com/apply",
+          "A global network of 18 selective international schools offering the prestigious UWC curriculum. Study abroad at one of 18 UWC schools worldwide, fostering international cooperation and environmental sustainability through holistic education.",
+        amount: 50000,
+        deadline: new Date("2025-12-31"),
+        field: "International Education, Leadership, Global Citizenship, Environmental Studies",
+        location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, and more)",
+        eligibility:
+          "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Competitive admission through national selection committees.",
+        status: "upcoming",
+        organizationName: "United World Colleges International",
+        applicationUrl: "https://www.uwc.org/apply",
         createdAt: new Date(),
-      }, */
+      },
     ];
 
     scholarships.forEach((scholarship) =>
