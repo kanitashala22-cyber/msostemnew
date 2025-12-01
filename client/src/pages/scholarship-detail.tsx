@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import type { Scholarship } from "@shared/schema"; //
 import techGirlsImage from "@assets/generated_images/techgirlstg.jpg";
+import uwcImage from "@assets/stock_images/international_studen_43973f10.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ScholarshipDetail() {
@@ -61,6 +62,7 @@ export default function ScholarshipDetail() {
   const isYES = scholarship.id === "scholarship-3";
   const isFLEX = scholarship.id === "scholarship-4";
   const isAFS = scholarship.id === "scholarship-5";
+  const isUWC = scholarship.id === "scholarship-6";
   
   // Get translated content with proper type assertion
   const scholarshipContent = (t.scholarshipContent as any)[scholarship.id];
@@ -134,6 +136,15 @@ export default function ScholarshipDetail() {
               <img
                 src={techGirlsImage}
                 alt="TechGirls program participants working on STEM projects"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          )}
+          {isUWC && (
+            <div className="mb-8">
+              <img
+                src={uwcImage}
+                alt="International students from diverse backgrounds at UWC campus"
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
               />
             </div>

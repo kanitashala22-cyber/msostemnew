@@ -387,7 +387,7 @@ export class MemStorage implements IStorage {
         id: "scholarship-6",
         title: "United World Colleges (UWC)",
         description:
-          "A global network of 18 selective international schools in countries spanning five continents. UWC offers the prestigious International Baccalaureate (IB) curriculum combined with a unique educational philosophy emphasizing international cooperation, environmental sustainability, and responsible global citizenship. Study for 2 years at one of these elite institutions with students from 180+ countries, developing leadership skills, cross-cultural understanding, and solutions to global challenges.",
+          "A transformative 2-year journey at one of 18 selective international schools across five continents. UWC offers the prestigious International Baccalaureate (IB) curriculum combined with a powerful mission: to make education a force to unite people, nations and cultures for peace and a sustainable future. Live and study with 3,500+ students from 180+ countries in a vibrant multicultural community. Develop leadership skills, deep cross-cultural understanding, environmental awareness, and solutions to global challenges. Join a global alumni network of 50,000+ leaders making impact worldwide. UWC emphasizes holistic education through four pillars: academic excellence, artistic expression, athletic development, and community service. Transform your perspective on the world and your role in creating positive change.",
         amount: 50000,
         deadline: new Date("2025-12-31"),
         field: "International Education, Leadership, Global Citizenship, Environmental Studies",

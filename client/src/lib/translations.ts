@@ -303,7 +303,7 @@ export const translations = {
       "scholarship-6": {
         title: "United World Colleges (UWC)",
         description:
-          "A global network of 18 selective international schools across five continents offering the prestigious International Baccalaureate (IB) curriculum. Study for 2 years at one of these elite institutions with students from 180+ countries, developing leadership skills and cross-cultural understanding while addressing global challenges in education, environment, and social responsibility.",
+          "A transformative 2-year educational journey at one of 18 selective international schools on five continents. Experience the prestigious International Baccalaureate (IB) curriculum alongside a powerful mission: making education a force to unite people, nations and cultures for peace and a sustainable future. Study with 3,500+ students from 180+ countries in a vibrant, diverse campus community. Develop leadership abilities, profound cross-cultural understanding, environmental consciousness, and solutions to global challenges. Join a global alumni network of 50,000+ leaders creating positive impact worldwide.",
         field: "International Education, Leadership, Global Citizenship, Environmental Studies, International Baccalaureate",
         location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, Kenya, Jordan, Wales, China, USA, and more)",
         eligibility:
@@ -1236,7 +1236,7 @@ export const translations = {
       "scholarship-6": {
         title: "United World Colleges (UWC)",
         description:
-          "Një rrjet global i 18 shkollave ndërkombëtare selektive në pesë kontinente që ofrojnë kurrikulum prestigious të International Baccalaureate (IB). Mëso për 2 vjet në një nga këto institucione elitare me studentë nga 180+ vende, duke zhvilluar aftësi lidershipi dhe mirëkuptim ndërkultural ndërsa gjesh zgjidhje për sfidat globale në edukimin, mjedisin dhe përgjegjësinë shoqërore.",
+          "Një udhëtim transformues 2-vjeçar në një nga 18 shkolla ndërkombëtare selektive në pesë kontinente. Përjeto kurrikulum prestigious të International Baccalaureate (IB) në krah të një misioni të fuqishëm: bëje arsimin një forcë për të bashkuar njerëzit, vendet dhe kulturat për paqen dhe një të ardhme të qëndrueshme. Studiohu me 3,500+ studentë nga 180+ vende në një komunitet kampusi të gjallë dhe të ndryshëm. Zhvillo aftësi lidershipi, mirëkuptim të thellë ndërkultural, ndërgjegjje mjedisore dhe zgjidhje për sfidat globale. Bashkohu me një rrjet global ish-studentësh të 50,000+ liderësh që kanë ndikim pozitiv në të gjithë botën.",
         field: "Edukimi Ndërkombëtar, Lidershipi, Qytetësia Globale, Studimet Mjedisore, International Baccalaureate",
         location: "Kampuse të shumta në të gjithë botën (Singapor, Kanada, Kosta Rika, Tajlanda, India, Kenia, Jordani, Uells, Kinë, SHBA, dhe më shumë)",
         eligibility:
