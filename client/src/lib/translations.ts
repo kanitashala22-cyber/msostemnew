@@ -306,11 +306,11 @@ export const translations = {
       "scholarship-6": {
         title: "United World Colleges (UWC)",
         description:
-          "A transformative 2-year educational journey at one of 18 selective international schools on five continents. Experience the prestigious International Baccalaureate (IB) curriculum alongside a powerful mission: making education a force to unite people, nations and cultures for peace and a sustainable future. Study with 3,500+ students from 180+ countries in a vibrant, diverse campus community. Develop leadership abilities, profound cross-cultural understanding, environmental consciousness, and solutions to global challenges. Join a global alumni network of 50,000+ leaders creating positive impact worldwide. Requirements include strong academic achievement (typically top 10-15% of cohort), demonstrated leadership potential, community service commitment, fluency in English, and commitment to UWC values of international cooperation and social responsibility. The rigorous application process involves online applications through national committees, academic transcripts, compelling personal essays, recommendation letters, national interviews, and potential school interviews. Selection emphasizes intellectual curiosity, character strength, cross-cultural awareness, vision for contributing to global community, and ability to excel in diverse international settings.",
-        field: "International Education, Leadership, Global Citizenship, Environmental Studies, International Baccalaureate",
+          "A transformative 2-year experience at one of 18 selective international schools on five continents. Study the prestigious International Baccalaureate (IB) curriculum with 3,500+ students from 180+ countries. Join a global movement dedicated to making education a force for peace and sustainable development.",
+        field: "International Education, Leadership, Global Citizenship, Environmental Studies",
         location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, Kenya, Jordan, Wales, China, USA, and more)",
         eligibility:
-          "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Fluency in English required. Competitive admission through national selection committees.",
+          "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Fluency in English required.",
         organizationName: "United World Colleges International",
         aboutProgram: {
           title: "About United World Colleges (UWC)",
