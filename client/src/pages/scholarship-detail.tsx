@@ -832,6 +832,193 @@ export default function ScholarshipDetail() {
                 </CardContent>
               </Card>
             </div>
+          ) : isUWC ? (
+            /* United World Colleges (UWC) Content */
+            <div className="space-y-8">
+              <Card>
+                <CardContent className="p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    {scholarshipContent?.aboutProgram?.title || "About United World Colleges (UWC)"}
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    {scholarshipContent?.aboutProgram?.description || "UWC is a global movement of 18 selective international schools in countries across five continents, serving over 3,500 students from more than 180 countries and territories. Founded in 1962, UWC makes education a force to unite people, nations and cultures for peace and a sustainable future. Each UWC offers the International Baccalaureate (IB) Diploma Program combined with a distinctive educational philosophy emphasizing international cooperation, environmental sustainability, and the development of responsible global citizens."}
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">
+                        {scholarshipContent?.aboutProgram?.programHighlights?.title || "Program Highlights"}
+                      </h3>
+                      <ul className="space-y-2 text-gray-700">
+                        {(scholarshipContent?.aboutProgram?.programHighlights?.items || [
+                          "Two-year International Baccalaureate (IB) Diploma program",
+                          "Education based on four pillars: academics, arts, athletics, and service",
+                          "Live on campus with 3,500+ students from 180+ countries",
+                          "Prestigious IB Curriculum recognized worldwide",
+                          "Focus on sustainability, global citizenship, and leadership",
+                          "Access to global alumni network of 50,000+ professionals"
+                        ]).map((item: string, idx: number) => (
+                          <li key={idx} className="flex items-start">
+                            <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">
+                        {scholarshipContent?.aboutProgram?.programComponents?.title || "Program Components"}
+                      </h3>
+                      <ul className="space-y-2 text-gray-700">
+                        {(scholarshipContent?.aboutProgram?.programComponents?.items || [
+                          "Rigorous academic curriculum with IB examinations",
+                          "Creativity, Activity, Service (CAS) program",
+                          "Environmental initiatives and sustainability projects",
+                          "Global citizenship education and intercultural dialogue",
+                          "Leadership development through student governance",
+                          "Experiential learning with field trips and research"
+                        ]).map((item: string, idx: number) => (
+                          <li key={idx} className="flex items-start">
+                            <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    {scholarshipContent?.eligibilityRequirements?.title || "Admission Requirements"}
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">
+                        {scholarshipContent?.eligibilityRequirements?.basicRequirements?.title || "Basic Requirements"}
+                      </h3>
+                      <ul className="space-y-2 text-gray-700">
+                        {(scholarshipContent?.eligibilityRequirements?.basicRequirements?.items || [
+                          "Ages 16-19 at time of application",
+                          "Citizens or legal residents of any country",
+                          "Strong academic achievement (typically top 10-15%)",
+                          "Demonstrated leadership potential",
+                          "Fluency in English (language of instruction)",
+                          "Commitment to UWC principles and values"
+                        ]).map((item: string, idx: number) => (
+                          <li key={idx}>• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">
+                        {scholarshipContent?.eligibilityRequirements?.applicationRequirements?.title || "Application Requirements"}
+                      </h3>
+                      <ul className="space-y-2 text-gray-700">
+                        {(scholarshipContent?.eligibilityRequirements?.applicationRequirements?.items || [
+                          "Complete online application via national UWC committee",
+                          "Academic transcripts and grades",
+                          "Personal essays addressing UWC mission",
+                          "2-3 recommendation letters from teachers",
+                          "Portfolio of leadership and community involvement",
+                          "Interview with national selection committee"
+                        ]).map((item: string, idx: number) => (
+                          <li key={idx}>• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-6">
+                    <h3 className="font-semibold text-gray-900 mb-3">
+                      {scholarshipContent?.eligibilityRequirements?.selectionCriteria?.title || "Selection Criteria"}
+                    </h3>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <ul className="space-y-2 text-gray-700">
+                        {(scholarshipContent?.eligibilityRequirements?.selectionCriteria?.items || [
+                          "Strong academic record and intellectual curiosity",
+                          "Demonstrated leadership qualities and growth potential",
+                          "Commitment to community service and social responsibility",
+                          "Cross-cultural awareness and ability to thrive in diverse environments",
+                          "Vision for future contributions to global community",
+                          "Personal integrity and commitment to UWC values"
+                        ]).map((item: string, idx: number) => (
+                          <li key={idx}>• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    UWC Campuses Worldwide
+                  </h2>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h3 className="font-semibold text-blue-900 mb-2">Europe</h3>
+                      <p className="text-sm text-blue-800">UWC Atlantic (Wales), UWC Adriatic (Italy), UWC Maastricht (Netherlands), UWC Mostar (Bosnia), UWC Robert Bosch (Germany), UWC Dilijan (Armenia)</p>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h3 className="font-semibold text-green-900 mb-2">Americas</h3>
+                      <p className="text-sm text-green-800">UWC-USA (New Mexico), Pearson College UWC (Canada), UWC Costa Rica, UWC ISAK Japan</p>
+                    </div>
+                    <div className="bg-purple-50 p-4 rounded-lg">
+                      <h3 className="font-semibold text-purple-900 mb-2">Asia & Africa</h3>
+                      <p className="text-sm text-purple-800">UWC South East Asia (Singapore), UWC Thailand, Mahindra UWC (India), Li Po Chun UWC (Hong Kong), UWC Changshu China, Waterford Kamhlaba UWC (Eswatini), UWC East Africa (Tanzania), UWC Red Cross Nordic (Norway)</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Scholarship & Financial Aid
+                  </h2>
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                    <h3 className="font-semibold text-green-900 mb-2">Full & Partial Scholarships Available</h3>
+                    <p className="text-green-800 mb-4">UWC is committed to selecting students based on merit, not financial means. Scholarships covering tuition, accommodation, and living expenses are available based on demonstrated need.</p>
+                    <ul className="text-green-800 space-y-1">
+                      <li>• Full scholarships cover 100% of costs (worth up to $50,000/year)</li>
+                      <li>• Partial scholarships based on family financial situation</li>
+                      <li>• Additional support for travel and personal expenses available</li>
+                      <li>• National committees help identify scholarship opportunities</li>
+                    </ul>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Application Timeline</h3>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• Applications open: September - November (varies by country)</li>
+                        <li>• Application deadline: December - February</li>
+                        <li>• National interviews: January - March</li>
+                        <li>• Final selections: March - April</li>
+                        <li>• Program starts: August/September</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">After UWC</h3>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• IB Diploma recognized by universities worldwide</li>
+                        <li>• UWC alumni accepted at top universities (Harvard, Oxford, MIT)</li>
+                        <li>• Global alumni network provides career opportunities</li>
+                        <li>• Davis UWC Scholars Program offers university scholarships in USA</li>
+                        <li>• Lifelong connections with peers from 180+ countries</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ) : (
             /* Generic scholarship content for other scholarships */
             <Card>
