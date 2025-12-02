@@ -107,36 +107,49 @@ export const translations = {
     // About Page
     about: {
       title: "About Us",
-      subtitle: "Learn about MsoSTEM and our mission to empower women in technology",
+      subtitle:
+        "Learn about MsoSTEM and our mission to empower women in technology",
       founderTitle: "Meet Our Founder",
       founderName: "Kanita Shala",
       founderRole: "Founder & Youth Activist",
-      founderBio: "Kanita Shala is a passionate youth activist dedicated to breaking barriers in technology education. As the founder of MsoSTEM, she leads the mission to create equal opportunities for young women in STEM fields.",
+      founderBio:
+        "Kanita Shala is a passionate youth activist dedicated to breaking barriers in technology education. As the founder of MsoSTEM, she leads the mission to create equal opportunities for young women in STEM fields.",
       aboutMsoStem: "About MsoSTEM",
-      msoStemDescription: "MsoSTEM is a platform and organization dedicated to empowering women in STEM (Science, Technology, Engineering, and Mathematics). We believe that every young woman deserves access to quality technology education and scholarship opportunities that can transform their future.",
+      msoStemDescription:
+        "MsoSTEM is a platform and organization dedicated to empowering women in STEM (Science, Technology, Engineering, and Mathematics). We believe that every young woman deserves access to quality technology education and scholarship opportunities that can transform their future.",
       ourMission: "Our Mission",
-      missionText: "To create a supportive and inclusive community where young women can learn to code, build projects, and access scholarships that help them pursue successful careers in technology.",
+      missionText:
+        "To create a supportive and inclusive community where young women can learn to code, build projects, and access scholarships that help them pursue successful careers in technology.",
       ourVision: "Our Vision",
-      visionText: "A world where women are equally represented in tech, where diverse perspectives drive innovation, and where every girl has the opportunity to learn and thrive in STEM fields.",
+      visionText:
+        "A world where women are equally represented in tech, where diverse perspectives drive innovation, and where every girl has the opportunity to learn and thrive in STEM fields.",
       whyWeExist: "Why We Exist",
-      existText: "The tech industry faces a significant gender gap. Women are underrepresented in coding and engineering roles. MsoSTEM was created to bridge this gap by providing accessible, beginner-friendly coding education and connecting young women with scholarship opportunities.",
+      existText:
+        "The tech industry faces a significant gender gap. Women are underrepresented in coding and engineering roles. MsoSTEM was created to bridge this gap by providing accessible, beginner-friendly coding education and connecting young women with scholarship opportunities.",
       whatWeDo: "What We Do",
       feature1: "Provide Interactive Coding Courses",
-      feature1Desc: "Hands-on HTML and CSS lessons designed specifically for beginners with zero coding experience.",
+      feature1Desc:
+        "Hands-on HTML and CSS lessons designed specifically for beginners with zero coding experience.",
       feature2: "Offer Real Scholarships",
-      feature2Desc: "Connect students with authentic U.S. State Department and private organization scholarships.",
+      feature2Desc:
+        "Connect students with authentic U.S. State Department and private organization scholarships.",
       feature3: "Build a Community",
-      feature3Desc: "Create a supportive environment where young women can learn, share, and grow together.",
+      feature3Desc:
+        "Create a supportive environment where young women can learn, share, and grow together.",
       feature4: "Inspire Future Tech Leaders",
-      feature4Desc: "Empower women to pursue careers in technology and become the next generation of innovators.",
+      feature4Desc:
+        "Empower women to pursue careers in technology and become the next generation of innovators.",
       communityGrowing: "Our Community is Growing",
-      communityText: "Starting from a small vision, MsoSTEM has grown into a vibrant community of young women passionate about technology. Every day, more students join us to learn coding, explore scholarship opportunities, and build their dreams in tech.",
+      communityText:
+        "Starting from a small vision, MsoSTEM has grown into a vibrant community of young women passionate about technology. Every day, more students join us to learn coding, explore scholarship opportunities, and build their dreams in tech.",
       joinUs: "Join Our Community",
-      joinText: "Be part of a movement that's changing the face of technology. Start learning today and discover the scholarship opportunities that can help you reach your goals.",
+      joinText:
+        "Be part of a movement that's changing the face of technology. Start learning today and discover the scholarship opportunities that can help you reach your goals.",
       startLearning: "Start Learning Now",
       ambassadorTitle: "Become a MsoSTEM Ambassador",
       ambassadorSubtitle: "Join Our Community of Leaders",
-      ambassadorDesc: "Are you passionate about empowering young women in technology? Become part of our ambassador program and help spread the word about MsoSTEM in your community. Ambassadors are leaders who inspire, guide, and mentor other students on their coding journey.",
+      ambassadorDesc:
+        "Are you passionate about empowering young women in technology? Become part of our ambassador program and help spread the word about MsoSTEM in your community. Ambassadors are leaders who inspire, guide, and mentor other students on their coding journey.",
       ambassadorFeatures: [
         "Lead and mentor young women in your community",
         "Organize local learning groups and workshops",
@@ -146,7 +159,8 @@ export const translations = {
       ],
       becomeAmbassador: "Apply to Become an Ambassador",
       partnerWithUs: "Partner With Us",
-      partnerDesc: "Are you an organization, school, or business interested in supporting MsoSTEM's mission? We welcome partnerships and collaborations to expand our reach and impact. Let's work together to empower more young women in technology.",
+      partnerDesc:
+        "Are you an organization, school, or business interested in supporting MsoSTEM's mission? We welcome partnerships and collaborations to expand our reach and impact. Let's work together to empower more young women in technology.",
       partnerButton: "Get in Touch",
     },
     // Course Page
@@ -307,8 +321,10 @@ export const translations = {
         title: "United World Colleges (UWC)",
         description:
           "A transformative 2-year experience at one of 18 selective international schools on five continents. Study the prestigious International Baccalaureate (IB) curriculum with 3,500+ students from 180+ countries. Join a global movement dedicated to making education a force for peace and sustainable development.",
-        field: "International Education, Leadership, Global Citizenship, Environmental Studies",
-        location: "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, Kenya, Jordan, Wales, China, USA, and more)",
+        field:
+          "International Education, Leadership, Global Citizenship, Environmental Studies",
+        location:
+          "Multiple campuses worldwide (Singapore, Canada, Costa Rica, Thailand, India, Kenya, Jordan, Wales, China, USA, and more)",
         eligibility:
           "High school students (ages 16-19) with strong academic records and demonstrated leadership potential. Fluency in English required.",
         organizationName: "United World Colleges International",
@@ -533,36 +549,49 @@ export const translations = {
     // About Page
     about: {
       title: "Rreth Nesh",
-      subtitle: "Mësoni rreth MsoSTEM dhe misionit tonë për fuqizimin e grave në teknologji",
+      subtitle:
+        "Mësoni rreth MsoSTEM dhe misionit tonë për fuqizimin e grave në teknologji",
       founderTitle: "Njihuni me themeluesen",
       founderName: "Kanita Shala",
       founderRole: "Themeluesja & Aktiviste e Rinisë",
-      founderBio: "Kanita Shala është një aktiviste e rinisë  e dedikuar për të thyer barrierat në edukimin e teknologjisë. Si themeluesja e MsoSTEM, ajo drejton misionin për të krijuar mundësi të barabarta për grua të reja në fushën e STEM.",
+      founderBio:
+        "Kanita Shala është një aktiviste e rinisë  e dedikuar për të thyer barrierat në edukimin e teknologjisë. Si themeluesja e MsoSTEM, ajo drejton misionin për të krijuar mundësi të barabarta për grua të reja në fushën e STEM.",
       aboutMsoStem: "Rreth MsoSTEM",
-      msoStemDescription: "MsoSTEM është një platformë dhe organizatë e dedikuar për fuqizimin e grave në STEM (Shkencat, Teknologjia, Inxhinieria dhe Matematika). Ne besojmë se çdo e re meriton qasje në edukimin e teknologjisë me cilësi të lartë dhe mundësi bursash që mund të transformojnë të ardhmen e saj.",
+      msoStemDescription:
+        "MsoSTEM është një platformë dhe organizatë e dedikuar për fuqizimin e grave në STEM (Shkencat, Teknologjia, Inxhinieria dhe Matematika). Ne besojmë se çdo e re meriton qasje në edukimin e teknologjisë me cilësi të lartë dhe mundësi bursash që mund të transformojnë të ardhmen e saj.",
       ourMission: "Misioni Ynë",
-      missionText: "Të krijoni një komunitet mbështetës dhe përfshirës ku vajza të reja mund të mësojnë të kodojnë, të ndërtojnë projekte dhe të qasjen bursa që u ndihmojnë të ndjekjin karriera të suksesshme në teknologji.",
+      missionText:
+        "Të krijoni një komunitet mbështetës dhe përfshirës ku vajza të reja mund të mësojnë të kodojnë, të ndërtojnë projekte dhe të qasjen bursa që u ndihmojnë të ndjekjin karriera të suksesshme në teknologji.",
       ourVision: "Vizioni Ynë",
-      visionText: "Një botë ku gratë përfaqësohen në mënyrë të barabartë në tech, ku perspektivat e ndryshme shtyjnë inovacionin, dhe ku çdo vajzë ka mundësinë të mësojë dhe të përparojë në fushën e STEM.",
+      visionText:
+        "Një botë ku gratë përfaqësohen në mënyrë të barabartë në tech, ku perspektivat e ndryshme shtyjnë inovacionin, dhe ku çdo vajzë ka mundësinë të mësojë dhe të përparojë në fushën e STEM.",
       whyWeExist: "Pse Ekzistojmë Ne",
-      existText: "Industria e teknologjisë përballet me një hendek të theksuar gjinie. Gratë nënpërfaqësohen në rolet e kodimit dhe inxhinierisë. MsoSTEM u krijua për të mbushur këtë hendek duke ofruar edukimin e aksesueshëm dhe fillestar të kodimit dhe duke lidhur grua të reja me mundësi bursash.",
+      existText:
+        "Industria e teknologjisë përballet me një hendek të theksuar gjinie. Gratë nënpërfaqësohen në rolet e kodimit dhe inxhinierisë. MsoSTEM u krijua për të mbushur këtë hendek duke ofruar edukimin e aksesueshëm dhe fillestar të kodimit dhe duke lidhur grua të reja me mundësi bursash.",
       whatWeDo: "Çfarë Bëjmë Ne",
       feature1: "Ofrojmë Kurse Kodimi Interaktiv",
-      feature1Desc: "Mësimet praktike HTML dhe CSS të dizajnuara posaçërisht për fillestarët pa përvojë kodimi.",
+      feature1Desc:
+        "Mësimet praktike HTML dhe CSS të dizajnuara posaçërisht për fillestarët pa përvojë kodimi.",
       feature2: "Ofrojmë Programe Shkëmbimi",
-      feature2Desc: "Lidhni studentët me bursa autentike të Departamentit të Shtetit të SHBA dhe organizatave private.",
+      feature2Desc:
+        "Lidhni studentët me bursa autentike të Departamentit të Shtetit të SHBA dhe organizatave private.",
       feature3: "Ndërtoni një Komunitet",
-      feature3Desc: "Krijoni një mjedis mbështetës ku grua të reja mund të mësojnë, të ndajnë dhe të rriten së bashku.",
+      feature3Desc:
+        "Krijoni një mjedis mbështetës ku grua të reja mund të mësojnë, të ndajnë dhe të rriten së bashku.",
       feature4: "Mbështesim Liderë të Ardhshëm në Tech",
-      feature4Desc: "Fuqizojmë gratë për të ndjekur karriera në teknologji dhe të bëhen brezin tjetër i inovatorëve.",
+      feature4Desc:
+        "Fuqizojmë gratë për të ndjekur karriera në teknologji dhe të bëhen brezin tjetër i inovatorëve.",
       communityGrowing: "Komuniteti Ynë po Rritet",
-      communityText: "Duke filluar nga një vizion i vogël, MsoSTEM ka rritur në një komunitet të vibrant të gravave të reja apasionate në teknologji. Çdo ditë, më shumë studentë i bashkohen nesh për të mësuar kodim, për të eksploruar mundësi bursash dhe për të ndërtuar ëndrrat e tyre në tech.",
+      communityText:
+        "Duke filluar nga një vizion i vogël, MsoSTEM ka rritur në një komunitet të vibrant të gravave të reja apasionate në teknologji. Çdo ditë, më shumë studentë i bashkohen nesh për të mësuar kodim, për të eksploruar mundësi bursash dhe për të ndërtuar ëndrrat e tyre në tech.",
       joinUs: "Bashkohu me Komunitetin Tonë",
-      joinText: "Bëhu pjesë e një lëvizjeje që po ndryshon fytyrën e teknologjisë. Fillo të mësosh sot dhe zbulo mundësi bursash që mund të të ndihmojnë të arrish qëllimet tuaja.",
+      joinText:
+        "Bëhu pjesë e një lëvizjeje që po ndryshon fytyrën e teknologjisë. Fillo të mësosh sot dhe zbulo mundësi bursash që mund të të ndihmojnë të arrish qëllimet tuaja.",
       startLearning: "Fillo të Mësosh Tani",
       ambassadorTitle: "Bëhu Ambasador i MsoSTEM",
       ambassadorSubtitle: "Bashkohu me Komunitetin e Liderëve",
-      ambassadorDesc: "Je i pasionuar për fuqizimin e vajzave të reja në teknologji? Bëhu pjesë e programit tonë të ambasadorëve dhe ndihmo në përhapjen e njohurive për MsoSTEM në komunitetin tënd. Ambasadorët janë liderë që inspirojnë, udhëzojnë dhe mentorëzojnë studentë të tjerë në udhëtimin e tyre të kodimit.",
+      ambassadorDesc:
+        "Je i pasionuar për fuqizimin e vajzave të reja në teknologji? Bëhu pjesë e programit tonë të ambasadorëve dhe ndihmo në përhapjen e njohurive për MsoSTEM në komunitetin tënd. Ambasadorët janë liderë që inspirojnë, udhëzojnë dhe mentorëzojnë studentë të tjerë në udhëtimin e tyre të kodimit.",
       ambassadorFeatures: [
         "Udhëzoni dhe mentorëzoni gra të reja në komunitetin tuaj",
         "Organizoni grupe lokale të mësimit dhe punëtori",
@@ -572,7 +601,8 @@ export const translations = {
       ],
       becomeAmbassador: "Aplikoni për të Bërë Ambasador",
       partnerWithUs: "Bashkëpunoni me Ne",
-      partnerDesc: "Jeni një organizatë, shkollë ose biznes i interesuar në mbështetjen e misionit të MsoSTEM? Ne mirëpresim bashkëpunimet dhe bashkëpunimet për të zgjeruar arritjen dhe ndikimin tonë. Le të punojmë së bashku për të fuqizuar më shumë gra të reja në teknologji.",
+      partnerDesc:
+        "Jeni një organizatë, shkollë ose biznes i interesuar në mbështetjen e misionit të MsoSTEM? Ne mirëpresim bashkëpunimet dhe bashkëpunimet për të zgjeruar arritjen dhe ndikimin tonë. Le të punojmë së bashku për të fuqizuar më shumë gra të reja në teknologji.",
       partnerButton: "Na Kontaktoni",
     },
     // Course Page
@@ -1243,8 +1273,10 @@ export const translations = {
         title: "United World Colleges (UWC)",
         description:
           "Një përvojë transformuese 2-vjeçare në një nga 18 shkolla ndërkombëtare selektive në pesë kontinente. Studiohu me kurrikulum prestigjioz International Baccalaureate (IB) me 3,500+ studentë nga 180+ vende. Bashkohu me një lëvizje globale të përkushtuar për paqen dhe zhvillimin e qëndrueshëm.",
-        field: "Edukimi Ndërkombëtar, Lidershipi, Qytetësia Globale, Studimet Mjedisore",
-        location: "Kampuse të shumta në të gjithë botën (Singapor, Kanada, Kosta Rika, Tajlanda, India, Kenia, Jordani, Uells, Kinë, SHBA, dhe më shumë)",
+        field:
+          "Edukimi Ndërkombëtar, Lidershipi, Qytetësia Globale, Studimet Mjedisore",
+        location:
+          "Kampuse të shumta në të gjithë botën (Singapor, Kanada, Kosta Rika, Tajlanda, India, Kenia, Jordani, Uells, Kinë, SHBA, dhe më shumë)",
         eligibility:
           "Nxënësit e shkollave të mesme (16-19 vjeç) me regjistrime akademike të forta dhe potencial lidershipi të demonstruar. Kërkojnë rrufluencë në gjuhën angleze. Pranimje konkurrente përmes komiteteve të përzgjedhjes kombëtare.",
         organizationName: "United World Colleges International",
