@@ -88,13 +88,13 @@ export default function Footer() {
                 <Link href="/scholarships" className="hover:text-white transition-colors duration-300">{t.home.footer.scholarships}</Link>
               </li>
               <li>
-                <a href="#community" className="hover:text-white transition-colors duration-300">{t.home.footer.community}</a>
+                <Link href="/about#ambassador" className="hover:text-white transition-colors duration-300">{t.home.footer.community}</Link>
               </li>
               <li>
                 <a href="#success-stories" className="hover:text-white transition-colors duration-300">{t.home.footer.successStories}</a>
               </li>
               <li>
-                <a href="#mentorship" className="hover:text-white transition-colors duration-300">{t.home.footer.mentorship}</a>
+                <Link href="/about#ambassador" className="hover:text-white transition-colors duration-300">{t.home.footer.mentorship}</Link>
               </li>
               <li>
                 <a href="#career-guide" className="hover:text-white transition-colors duration-300">{t.home.footer.careerGuide}</a>

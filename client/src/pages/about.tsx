@@ -138,7 +138,7 @@ export default function About() {
           </Card>
 
           {/* Ambassadors Section */}
-          <Card className="mb-16 bg-gradient-to-r from-orange-50 to-pink-50 border-none shadow-lg">
+          <Card id="ambassador" className="mb-16 bg-gradient-to-r from-orange-50 to-pink-50 border-none shadow-lg scroll-mt-24">
             <CardContent className="p-8">
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold text-gray-900 mb-2">{t.about.ambassadorTitle}</h2>
