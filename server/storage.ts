@@ -9,6 +9,8 @@ import {
   type InsertUserProgress,
   type CodeProject,
   type InsertCodeProject,
+  type BlogPost,
+  type InsertBlogPost,
 } from "@shared/schema";
 import { randomUUID } from "crypto";
 
@@ -51,6 +53,12 @@ export interface IStorage {
     id: string,
     project: Partial<CodeProject>,
   ): Promise<CodeProject>;
+
+  // Blog Posts
+  getBlogPosts(): Promise<BlogPost[]>;
+  getBlogPost(id: string): Promise<BlogPost | undefined>;
+  getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
+  createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
 }
 
 export class MemStorage implements IStorage {
@@ -59,6 +67,7 @@ export class MemStorage implements IStorage {
   private scholarships: Map<string, Scholarship>;
   private userProgress: Map<string, UserProgress>;
   private codeProjects: Map<string, CodeProject>;
+  private blogPosts: Map<string, BlogPost>;
 
   constructor() {
     this.users = new Map();
@@ -66,6 +75,7 @@ export class MemStorage implements IStorage {
     this.scholarships = new Map();
     this.userProgress = new Map();
     this.codeProjects = new Map();
+    this.blogPosts = new Map();
 
     // Initialize with sample data
     this.initializeSampleData();
@@ -404,6 +414,296 @@ export class MemStorage implements IStorage {
     scholarships.forEach((scholarship) =>
       this.scholarships.set(scholarship.id, scholarship),
     );
+
+    // Sample Blog Posts
+    const blogPosts: BlogPost[] = [
+      {
+        id: "blog-1",
+        slug: "why-girls-should-learn-coding",
+        title: "Why Every Girl Should Learn to Code in 2025",
+        excerpt: "Discover how coding opens doors to countless opportunities and why starting early gives girls a competitive advantage in the tech industry.",
+        content: `# Why Every Girl Should Learn to Code in 2025
+
+The tech industry is one of the fastest-growing sectors globally, yet women remain underrepresented. Learning to code isn't just about getting a job—it's about developing critical thinking, problem-solving skills, and the confidence to shape the future.
+
+## The Growing Demand for Tech Skills
+
+By 2025, there will be over 3.5 million computing jobs available, but only enough graduates to fill 17% of them. This gap represents a massive opportunity for young women entering the field.
+
+## Benefits of Learning to Code Early
+
+**1. Develops Problem-Solving Skills**
+Coding teaches you to break down complex problems into smaller, manageable pieces. This skill transfers to every aspect of life.
+
+**2. Builds Confidence**
+Creating something from nothing—whether it's a website, app, or game—is incredibly empowering.
+
+**3. Opens Career Doors**
+From healthcare to entertainment, every industry needs people who understand technology.
+
+**4. Financial Independence**
+Tech jobs consistently rank among the highest-paying careers, with excellent work-life balance.
+
+## Getting Started
+
+The best time to start learning to code is now. With resources like MsoSTEM, you can begin your journey with structured lessons designed specifically for beginners.
+
+Start with HTML and CSS—they're the building blocks of the web and a gentle introduction to programming concepts.`,
+        category: "Education",
+        imageUrl: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        readTime: 5,
+        published: true,
+        createdAt: new Date("2025-01-15"),
+      },
+      {
+        id: "blog-2",
+        slug: "html-css-basics-beginners-guide",
+        title: "HTML & CSS Basics: A Complete Beginner's Guide",
+        excerpt: "Master the fundamentals of web development with this comprehensive guide to HTML and CSS. Perfect for absolute beginners!",
+        content: `# HTML & CSS Basics: A Complete Beginner's Guide
+
+Welcome to the world of web development! If you've ever wondered how websites are built, you're in the right place.
+
+## What is HTML?
+
+HTML (HyperText Markup Language) is the skeleton of every webpage. It defines the structure and content—headings, paragraphs, images, and links.
+
+### Your First HTML Code
+
+\`\`\`html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Page</title>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>Welcome to my website.</p>
+</body>
+</html>
+\`\`\`
+
+## What is CSS?
+
+CSS (Cascading Style Sheets) is the styling language that makes websites beautiful. It controls colors, fonts, layouts, and animations.
+
+### Basic CSS Example
+
+\`\`\`css
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #8B5CF6;
+  text-align: center;
+}
+\`\`\`
+
+## Practice Makes Perfect
+
+The best way to learn is by doing. Try our interactive code playground to experiment with HTML and CSS in real-time!`,
+        category: "Tutorial",
+        imageUrl: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        readTime: 8,
+        published: true,
+        createdAt: new Date("2025-01-10"),
+      },
+      {
+        id: "blog-3",
+        slug: "exchange-programs-for-stem-students",
+        title: "Top Exchange Programs for STEM Students in 2025",
+        excerpt: "Explore the best fully-funded exchange programs available for students passionate about science, technology, engineering, and mathematics.",
+        content: `# Top Exchange Programs for STEM Students in 2025
+
+Exchange programs offer life-changing opportunities to study abroad, gain international experience, and build a global network. Here are the best programs for STEM students.
+
+## TechGirls
+
+The flagship program for young women in STEM! This U.S. Department of State initiative brings girls from 37 countries to the United States for intensive technology training.
+
+**Highlights:**
+- 23-day program at Virginia Tech
+- All expenses covered
+- Mentorship opportunities
+
+## Benjamin Franklin Transatlantic Fellowship
+
+Perfect for European students interested in diplomacy and international relations.
+
+**Highlights:**
+- 4-week program at Purdue University
+- Focus on leadership and civic engagement
+- Fully funded
+
+## United World Colleges (UWC)
+
+A 2-year transformative experience at one of 18 international schools worldwide.
+
+**Highlights:**
+- International Baccalaureate curriculum
+- Full scholarships available
+- 3,500+ students from 180+ countries
+
+## How to Prepare Your Application
+
+1. **Start Early**: Most programs have fall deadlines
+2. **Focus on Leadership**: Highlight community involvement
+3. **Practice English**: Strong communication skills are essential
+4. **Be Authentic**: Share your genuine passion for STEM`,
+        category: "Opportunities",
+        imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        readTime: 6,
+        published: true,
+        createdAt: new Date("2025-01-05"),
+      },
+      {
+        id: "blog-4",
+        slug: "building-your-first-website",
+        title: "Building Your First Website: Step-by-Step Project",
+        excerpt: "Follow along as we build a complete personal portfolio website from scratch using HTML and CSS.",
+        content: `# Building Your First Website: Step-by-Step Project
+
+Let's build something real! In this tutorial, we'll create a beautiful personal portfolio website.
+
+## Project Overview
+
+We'll create:
+- A hero section with your name and title
+- An about section
+- A projects showcase
+- A contact section
+
+## Step 1: Set Up Your HTML Structure
+
+\`\`\`html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Your Name</h1>
+    <p>Future Web Developer</p>
+  </header>
+</body>
+</html>
+\`\`\`
+
+## Step 2: Add Your Styling
+
+\`\`\`css
+.hero {
+  background: linear-gradient(135deg, #8B5CF6, #EC4899);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+\`\`\`
+
+## Next Steps
+
+Continue adding sections and experimenting with different styles. Remember, every expert was once a beginner!`,
+        category: "Tutorial",
+        imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        readTime: 10,
+        published: true,
+        createdAt: new Date("2025-01-01"),
+      },
+      {
+        id: "blog-5",
+        slug: "women-in-tech-success-stories",
+        title: "Inspiring Women in Tech: Success Stories to Motivate You",
+        excerpt: "Read about remarkable women who broke barriers in technology and learn from their journeys to success.",
+        content: `# Inspiring Women in Tech: Success Stories to Motivate You
+
+These women prove that there are no limits to what you can achieve in technology.
+
+## Ada Lovelace: The First Programmer
+
+In the 1840s, Ada Lovelace wrote the first computer algorithm—before computers even existed! Her vision laid the foundation for modern programming.
+
+## Grace Hopper: Pioneer of Computer Languages
+
+Rear Admiral Grace Hopper developed one of the first programming languages and coined the term "debugging" after finding an actual bug in a computer.
+
+## Reshma Saujani: Founder of Girls Who Code
+
+After seeing the gender gap in tech firsthand, Reshma founded Girls Who Code, which has now taught over 500,000 girls to code.
+
+## Fei-Fei Li: AI Pioneer
+
+Dr. Fei-Fei Li's work on ImageNet revolutionized artificial intelligence and computer vision. She advocates for diversity in AI development.
+
+## Your Story Starts Now
+
+These women started just like you—curious, determined, and ready to learn. Your journey in tech begins with a single line of code.`,
+        category: "Inspiration",
+        imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        readTime: 4,
+        published: true,
+        createdAt: new Date("2024-12-28"),
+      },
+      {
+        id: "blog-6",
+        slug: "arduino-projects-for-beginners",
+        title: "Fun Arduino Projects for Beginners: Getting Started with Electronics",
+        excerpt: "Combine coding with electronics! Learn how to start building real-world projects with Arduino microcontrollers.",
+        content: `# Fun Arduino Projects for Beginners
+
+Arduino is a fantastic way to bridge the gap between code and the physical world. Let's explore some beginner-friendly projects!
+
+## What is Arduino?
+
+Arduino is an open-source electronics platform that makes it easy to create interactive projects. You write code to control LEDs, motors, sensors, and more.
+
+## Project 1: Blinking LED
+
+The "Hello World" of Arduino! Make an LED blink on and off.
+
+\`\`\`cpp
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}
+\`\`\`
+
+## Project 2: Traffic Light
+
+Create a working traffic light with three LEDs (red, yellow, green).
+
+## Project 3: Temperature Sensor
+
+Build a digital thermometer that displays temperature readings.
+
+## Getting Started
+
+1. Get an Arduino Starter Kit
+2. Download the Arduino IDE
+3. Follow our Arduino course on MsoSTEM
+4. Start building!
+
+The possibilities are endless when you combine coding with electronics!`,
+        category: "Tutorial",
+        imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        readTime: 7,
+        published: true,
+        createdAt: new Date("2024-12-20"),
+      },
+    ];
+
+    blogPosts.forEach((post) => this.blogPosts.set(post.id, post));
   }
 
   // Users
@@ -594,6 +894,32 @@ export class MemStorage implements IStorage {
     };
     this.codeProjects.set(id, updated);
     return updated;
+  }
+
+  // Blog Posts
+  async getBlogPosts(): Promise<BlogPost[]> {
+    return Array.from(this.blogPosts.values())
+      .filter((post) => post.published)
+      .sort((a, b) => new Date(b.createdAt!).getTime() - new Date(a.createdAt!).getTime());
+  }
+
+  async getBlogPost(id: string): Promise<BlogPost | undefined> {
+    return this.blogPosts.get(id);
+  }
+
+  async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+    return Array.from(this.blogPosts.values()).find((post) => post.slug === slug);
+  }
+
+  async createBlogPost(insertPost: InsertBlogPost): Promise<BlogPost> {
+    const id = randomUUID();
+    const post: BlogPost = {
+      ...insertPost,
+      id,
+      createdAt: new Date(),
+    };
+    this.blogPosts.set(id, post);
+    return post;
   }
 }
 
