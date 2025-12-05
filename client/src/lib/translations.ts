@@ -166,7 +166,7 @@ export const translations = {
     },
     // Blog
     blog: {
-      title: "CodeHer Blog",
+      title: "MsoSTEM Blog",
       subtitle: "Discover tutorials, success stories, and insights to help you on your coding journey.",
       readMore: "Read More",
       minRead: "min read",
@@ -627,7 +627,7 @@ export const translations = {
     },
     // Blog
     blog: {
-      title: "Blogu i CodeHer",
+      title: "Blogu i MsoSTEM",
       subtitle: "Zbulo tutoriale, histori suksesi dhe njohuri për të të ndihmuar në udhëtimin tënd të kodimit.",
       readMore: "Lexo Më Shumë",
       minRead: "min lexim",
