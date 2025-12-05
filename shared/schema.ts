@@ -60,6 +60,19 @@ export const codeProjects = pgTable("code_projects", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
+export const blogPosts = pgTable("blog_posts", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  slug: text("slug").notNull().unique(),
+  title: text("title").notNull(),
+  excerpt: text("excerpt").notNull(),
+  content: text("content").notNull(),
+  category: text("category").notNull(),
+  imageUrl: text("image_url"),
+  readTime: integer("read_time").notNull(),
+  published: boolean("published").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 // Insert schemas
 export const insertUserSchema = createInsertSchema(users).omit({
   id: true,
@@ -86,6 +99,11 @@ export const insertCodeProjectSchema = createInsertSchema(codeProjects).omit({
   updatedAt: true,
 });
 
+export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
+  id: true,
+  createdAt: true,
+});
+
 // Types
 export type User = typeof users.$inferSelect;
 export type InsertUser = z.infer<typeof insertUserSchema>;
@@ -101,3 +119,6 @@ export type InsertUserProgress = z.infer<typeof insertUserProgressSchema>;
 
 export type CodeProject = typeof codeProjects.$inferSelect;
 export type InsertCodeProject = z.infer<typeof insertCodeProjectSchema>;
+
+export type BlogPost = typeof blogPosts.$inferSelect;
+export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;
