@@ -8,6 +8,7 @@ export const translations = {
       scholarships: "Exchange Programs",
       playground: "Code Playground",
       about: "About Us",
+      blog: "Blog",
       language: "Language",
     },
     // Home Page
@@ -162,6 +163,24 @@ export const translations = {
       partnerDesc:
         "Are you an organization, school, or business interested in supporting MsoSTEM's mission? We welcome partnerships and collaborations to expand our reach and impact. Let's work together to empower more young women in technology.",
       partnerButton: "Get in Touch",
+    },
+    // Blog
+    blog: {
+      title: "CodeHer Blog",
+      subtitle: "Discover tutorials, success stories, and insights to help you on your coding journey.",
+      readMore: "Read More",
+      minRead: "min read",
+      backToBlog: "Back to Blog",
+      postNotFound: "Blog post not found",
+      noPosts: "No blog posts available yet.",
+      shareArticle: "Share this article",
+      categories: {
+        all: "All",
+        education: "Education",
+        tutorial: "Tutorial",
+        opportunities: "Opportunities",
+        inspiration: "Inspiration",
+      },
     },
     // Course Page
     course: {
@@ -450,6 +469,7 @@ export const translations = {
       scholarships: "Programe Shkëmbimi",
       playground: "Hapësira e Kodit",
       about: "Rreth Nesh",
+      blog: "Blogu",
       language: "Gjuha",
     },
     // Home Page
@@ -604,6 +624,24 @@ export const translations = {
       partnerDesc:
         "Jeni një organizatë, shkollë ose biznes i interesuar në mbështetjen e misionit të MsoSTEM? Ne mirëpresim bashkëpunimet dhe bashkëpunimet për të zgjeruar arritjen dhe ndikimin tonë. Le të punojmë së bashku për të fuqizuar më shumë gra të reja në teknologji.",
       partnerButton: "Na Kontaktoni",
+    },
+    // Blog
+    blog: {
+      title: "Blogu i CodeHer",
+      subtitle: "Zbulo tutoriale, histori suksesi dhe njohuri për të të ndihmuar në udhëtimin tënd të kodimit.",
+      readMore: "Lexo Më Shumë",
+      minRead: "min lexim",
+      backToBlog: "Kthehu te Blogu",
+      postNotFound: "Postimi i blogut nuk u gjet",
+      noPosts: "Nuk ka postime blogu të disponueshme ende.",
+      shareArticle: "Shpërndaje këtë artikull",
+      categories: {
+        all: "Të Gjitha",
+        education: "Arsimimi",
+        tutorial: "Tutorial",
+        opportunities: "Mundësitë",
+        inspiration: "Inspirimi",
+      },
     },
     // Course Page
     course: {

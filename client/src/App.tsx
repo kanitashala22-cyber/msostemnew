@@ -12,6 +12,8 @@ import Scholarships from "@/pages/scholarships";
 import ScholarshipDetail from "@/pages/scholarship-detail";
 import Playground from "@/pages/playground";
 import About from "@/pages/about";
+import Blog from "@/pages/blog";
+import BlogPost from "@/pages/blog-post";
 
 
 
@@ -28,6 +30,8 @@ function Router() {
       <Route path="/scholarships/:id" component={ScholarshipDetail} />
       <Route path="/playground" component={Playground} />
       <Route path="/about" component={About} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route component={NotFound} />
     </Switch>
   );

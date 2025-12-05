@@ -54,6 +54,13 @@ export default function Navbar() {
             }`} data-testid="link-about">
               {t.nav.about}
             </Link>
+            <Link href="/blog" className={`font-medium transition-colors duration-300 ${
+              isActive('/blog') 
+                ? 'text-primary' 
+                : 'text-gray-700 hover:text-primary'
+            }`} data-testid="link-blog">
+              {t.nav.blog || "Blog"}
+            </Link>
             <LanguageSwitcher />
             <Button className="bg-primary text-white hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg" data-testid="button-start-learning">
               {t.course.startCourse}
@@ -122,6 +129,18 @@ export default function Navbar() {
               data-testid="link-about-mobile"
             >
               {t.nav.about}
+            </Link>
+            <Link 
+              href="/blog"
+              className={`block font-medium transition-colors duration-300 ${
+                isActive('/blog') 
+                  ? 'text-primary' 
+                  : 'text-gray-700 hover:text-primary'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+              data-testid="link-blog-mobile"
+            >
+              {t.nav.blog || "Blog"}
             </Link>
             <LanguageSwitcher />
             <Button className="w-full bg-primary text-white hover:bg-primary/90 transition-all duration-300" data-testid="button-start-learning-mobile">
