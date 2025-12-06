@@ -14,6 +14,7 @@ import Playground from "@/pages/playground";
 import About from "@/pages/about";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
+import FloatingAmbassadorButton from "@/components/floating-ambassador-button";
 
 
 
@@ -44,6 +45,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <FloatingAmbassadorButton />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>
