@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Code, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -11,9 +11,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
-                <Code className="text-white text-xl" />
-              </div>
+              <img 
+                src="/favicon.png" 
+                alt="MsoSTEM Logo" 
+                className="w-12 h-12 rounded-lg"
+              />
               <span className="text-3xl font-bold gradient-text">MsoSTEM</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
