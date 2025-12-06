@@ -370,3 +370,53 @@ export function WebsiteSchema({
 
   return null;
 }
+
+interface CourseListSchemaProps {
+  courses: Array<{
+    name: string;
+    description: string;
+    provider: string;
+    url: string;
+  }>;
+}
+
+export function CourseListSchema({ courses }: CourseListSchemaProps) {
+  useEffect(() => {
+    if (!courses.length) return;
+    
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: courses.map((course, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Course",
+          name: course.name,
+          description: course.description,
+          provider: {
+            "@type": "Organization",
+            name: course.provider,
+          },
+          url: course.url,
+          isAccessibleForFree: true,
+        },
+      })),
+    };
+
+    let script = document.querySelector('script[data-schema="courselist"]') as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.setAttribute("data-schema", "courselist");
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(schema);
+    
+    return () => {
+      script?.remove();
+    };
+  }, [courses]);
+
+  return null;
+}

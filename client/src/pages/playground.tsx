@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "@/components/navbar";
 import CodeEditor from "@/components/code-editor";
 import Footer from "@/components/footer";
@@ -9,14 +9,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Save, RotateCcw, Play } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO, BreadcrumbSchema } from "@/components/seo";
 
 export default function Playground() {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
-  useEffect(() => {
-    document.title = "MsoSTEM - Code Playground";
-  }, []);
+  const breadcrumbItems = [
+    { name: "Home", url: "https://msostem.replit.app" },
+    { name: language === "sq" ? "Lojëra Kodimi" : "Code Playground", url: "https://msostem.replit.app/playground" },
+  ];
   const [htmlCode, setHtmlCode] = useState(`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,6 +165,13 @@ p {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={language === "sq" ? "Lojëra Kodimi - Shkruaj dhe Ekzekuto Kod HTML/CSS | MsoSTEM" : "Code Playground - Write and Run HTML/CSS Code | MsoSTEM"}
+        description={language === "sq" ? "Praktiko aftësitë e tua në kodim me lojërën tonë interaktive. Shkruaj HTML dhe CSS, shiko rezultatet në kohë reale dhe shkarkoni projektin tuaj." : "Practice your coding skills with our interactive playground. Write HTML and CSS, see live results, and download your project."}
+        keywords={language === "sq" ? "lojëra kodimi, editor HTML, editor CSS, praktikë kodimi, mëso kodim online" : "code playground, HTML editor, CSS editor, coding practice, learn coding online, live code editor"}
+        canonicalUrl="https://msostem.replit.app/playground"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navbar />
       
       <div className="pt-24 pb-20">

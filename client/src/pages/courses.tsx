@@ -4,14 +4,36 @@ import Footer from "@/components/footer";
 import { useQuery } from "@tanstack/react-query";
 import type { Course } from "@shared/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO, BreadcrumbSchema, CourseListSchema } from "@/components/seo";
 
 export default function Courses() {
+  const { language } = useLanguage();
   const { data: courses, isLoading } = useQuery<Course[]>({
     queryKey: ["/api/courses"],
   });
 
+  const breadcrumbItems = [
+    { name: "Home", url: "https://msostem.replit.app" },
+    { name: language === "sq" ? "Kurse" : "Courses", url: "https://msostem.replit.app/courses" },
+  ];
+
+  const courseItems = courses?.map(c => ({
+    name: c.title,
+    description: c.description,
+    provider: "MsoSTEM",
+    url: `https://msostem.replit.app/course/${c.id}`,
+  })) || [];
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={language === "sq" ? "Kurse Falas Kodimi - Mëso HTML, CSS dhe Arduino | MsoSTEM" : "Free Coding Courses - Learn HTML, CSS and Arduino | MsoSTEM"}
+        description={language === "sq" ? "Zbulo kurse falas programimi në HTML, CSS dhe Arduino. Mësime interaktive hap pas hapi për vajzat që duan të mësojnë zhvillim web dhe elektronikë." : "Discover free programming courses in HTML, CSS, and Arduino. Step-by-step interactive lessons for girls who want to learn web development and electronics."}
+        keywords={language === "sq" ? "kurse kodimi falas, mëso HTML, mëso CSS, kurse Arduino, programim për fillestarë" : "free coding courses, learn HTML, learn CSS, Arduino courses, programming for beginners, girls who code"}
+        canonicalUrl="https://msostem.replit.app/courses"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <CourseListSchema courses={courseItems} />
       <Navbar />
 
       <div className="pt-24 pb-20">

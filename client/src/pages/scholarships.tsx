@@ -16,8 +16,16 @@ import { Label } from "@/components/ui/label";
 import { useQuery } from "@tanstack/react-query";
 import { Search } from "lucide-react";
 import type { Scholarship } from "@shared/schema";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO, BreadcrumbSchema } from "@/components/seo";
 
 export default function Scholarships() {
+  const { language } = useLanguage();
+  
+  const breadcrumbItems = [
+    { name: "Home", url: "https://msostem.replit.app" },
+    { name: language === "sq" ? "Programet e Shkëmbimit" : "Exchange Programs", url: "https://msostem.replit.app/scholarships" },
+  ];
   const [filters, setFilters] = useState({
     search: "",
     field: "All Fields",
@@ -196,6 +204,13 @@ export default function Scholarships() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={language === "sq" ? "Programet e Shkëmbimit - TechGirls, FLEX, YES dhe Më Shumë | MsoSTEM" : "Exchange Programs - TechGirls, FLEX, YES and More | MsoSTEM"}
+        description={language === "sq" ? "Zbulo programet e shkëmbimit si TechGirls, FLEX, YES, Benjamin Franklin dhe UWC. Mundësi unike për të studiuar jashtë dhe për të zhvilluar aftësitë e lidershipit." : "Discover exchange programs like TechGirls, FLEX, YES, Benjamin Franklin and UWC. Unique opportunities to study abroad and develop leadership skills."}
+        keywords={language === "sq" ? "programe shkëmbimi, TechGirls, FLEX, YES, Benjamin Franklin, UWC, studime jashtë, bursa" : "exchange programs, TechGirls, FLEX, YES, Benjamin Franklin, UWC, study abroad, scholarships, girls in tech"}
+        canonicalUrl="https://msostem.replit.app/scholarships"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navbar />
 
       <div className="pt-24 pb-20">

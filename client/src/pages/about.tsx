@@ -5,16 +5,25 @@ import { Heart, Target, Users, BookOpen, Award, Code } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
+import { SEO, BreadcrumbSchema } from "@/components/seo";
 
 export default function About() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
-  useEffect(() => {
-    document.title = "MsoSTEM - About Us";
-  }, []);
+  const breadcrumbItems = [
+    { name: "Home", url: "https://msostem.replit.app" },
+    { name: language === "sq" ? "Rreth Nesh" : "About Us", url: "https://msostem.replit.app/about" },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={language === "sq" ? "Rreth Nesh - Misioni dhe Ekipi i MsoSTEM" : "About Us - MsoSTEM Mission and Team"}
+        description={language === "sq" ? "Njihu me MsoSTEM dhe misionin tonë për të fuqizuar vajzat në teknologji. Zbulo programin e Ambasadorëve dhe si mund të bëhesh pjesë e komunitetit tonë." : "Meet MsoSTEM and our mission to empower girls in technology. Discover the Ambassadors program and how you can join our community."}
+        keywords={language === "sq" ? "MsoSTEM, rreth nesh, misioni, ambasadorë, vajza në teknologji, arsim STEM" : "MsoSTEM, about us, mission, ambassadors, girls in tech, STEM education, women in technology"}
+        canonicalUrl="https://msostem.replit.app/about"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navbar />
       
       <div className="pt-20 pb-16">
