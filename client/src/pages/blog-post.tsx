@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Clock, Calendar, ArrowLeft, Tag } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
+import { SEO, ArticleSchema, BreadcrumbSchema } from "@/components/seo";
 
 export default function BlogPostPage() {
   const { language } = useLanguage();
@@ -172,8 +173,36 @@ export default function BlogPostPage() {
     );
   }
 
+  const breadcrumbItems = [
+    { name: "Home", url: "https://msostem.replit.app" },
+    { name: "Blog", url: "https://msostem.replit.app/blog" },
+    { name: post.title, url: `https://msostem.replit.app/blog/${post.slug}` },
+  ];
+
+  const postUrl = `https://msostem.replit.app/blog/${post.slug}`;
+  const wordCount = post.content?.split(/\s+/).length || 0;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-950 dark:to-gray-900">
+      <SEO
+        title={`${post.title} | MsoSTEM Blog`}
+        description={post.excerpt || ""}
+        keywords={`${post.category}, coding, programming, MsoSTEM, women in tech, ${post.title.toLowerCase().split(' ').slice(0, 5).join(', ')}`}
+        ogImage={post.imageUrl || undefined}
+        ogType="article"
+        canonicalUrl={postUrl}
+        articlePublishedTime={post.createdAt ? new Date(post.createdAt).toISOString() : undefined}
+        articleAuthor="MsoSTEM Team"
+      />
+      <ArticleSchema
+        headline={post.title}
+        description={post.excerpt || ""}
+        datePublished={post.createdAt ? new Date(post.createdAt).toISOString() : new Date().toISOString()}
+        image={post.imageUrl || undefined}
+        url={postUrl}
+        wordCount={wordCount}
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navbar />
 
       <main className="pt-24 pb-16">

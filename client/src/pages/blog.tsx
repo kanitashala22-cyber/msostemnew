@@ -6,10 +6,16 @@ import Footer from "@/components/footer";
 import { Link } from "wouter";
 import { Clock, ArrowRight, Calendar, Tag } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
+import { SEO, BreadcrumbSchema } from "@/components/seo";
 
 export default function Blog() {
   const { language } = useLanguage();
   const t = translations[language];
+  
+  const breadcrumbItems = [
+    { name: "Home", url: "https://msostem.replit.app" },
+    { name: language === "sq" ? "Blog" : "Blog", url: "https://msostem.replit.app/blog" },
+  ];
 
   const { data: posts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog"],
@@ -37,6 +43,13 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-950 dark:to-gray-900">
+      <SEO
+        title={language === "sq" ? "Blog MsoSTEM - Tutoriale Kodimi, Histori Suksesi & Këshilla Teknologjie" : "MsoSTEM Blog - Coding Tutorials, Success Stories & Tech Tips"}
+        description={language === "sq" ? "Zbulo tutoriale kodimi, histori frymëzuese të grave në teknologji, dhe mundësi bursash. Mëso HTML, CSS, Arduino dhe më shumë me udhëzuesit tanë të thjeshtë." : "Discover coding tutorials, inspiring stories of women in tech, and scholarship opportunities. Learn HTML, CSS, Arduino and more with our beginner-friendly guides."}
+        keywords={language === "sq" ? "tutoriale kodimi, mëso HTML, mëso CSS, gra në teknologji, bursa STEM, Arduino për fillestarë" : "coding tutorials, learn HTML, learn CSS, women in tech, STEM scholarships, Arduino for beginners, girls who code blog"}
+        canonicalUrl="https://msostem.replit.app/blog"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Navbar />
 
       <main className="pt-24 pb-16">

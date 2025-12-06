@@ -9,14 +9,22 @@ import { Link } from "wouter";
 import { Play, Clock, CheckCircle, Rocket, Search, Eye, Code, GraduationCap } from "lucide-react";
 import type { Course, Scholarship } from "@shared/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useEffect } from "react";
+import { SEO, OrganizationSchema, WebsiteSchema, FAQSchema } from "@/components/seo";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
-  useEffect(() => {
-    document.title = "MsoSTEM - Learn Programming & Find Scholarships";
-  }, []);
+  const faqQuestions = language === "sq" ? [
+    { question: "Çfarë është MsoSTEM?", answer: "MsoSTEM është një platformë edukative falas që fuqizon vajzat e reja në teknologji përmes kurseve interaktive të kodimit, bursave dhe mbështetjes së komunitetit." },
+    { question: "A janë kurset falas?", answer: "Po, të gjitha kurset tona të HTML, CSS dhe Arduino janë plotësisht falas. Ne besojmë se arsimi në teknologji duhet të jetë i aksesueshëm për të gjithë." },
+    { question: "Çfarë moshë duhet të kem për të filluar?", answer: "Kurset tona janë projektuar për vajzat 12-18 vjeç, por kushdo që dëshiron të mësojë kodim është i mirëpritur." },
+    { question: "A kam nevojë për përvojë të mëparshme në kodim?", answer: "Jo! Kurset tona fillojnë nga bazat absolute. Ju do të mësoni gjithçka hap pas hapi." },
+  ] : [
+    { question: "What is MsoSTEM?", answer: "MsoSTEM is a free educational platform that empowers young women in technology through interactive coding courses, scholarships, and community support." },
+    { question: "Are the courses free?", answer: "Yes, all our HTML, CSS, and Arduino courses are completely free. We believe tech education should be accessible to everyone." },
+    { question: "What age do I need to be to start?", answer: "Our courses are designed for girls aged 12-18, but anyone who wants to learn coding is welcome." },
+    { question: "Do I need prior coding experience?", answer: "No! Our courses start from the absolute basics. You'll learn everything step by step." },
+  ];
   
   const { data: courses, isLoading: coursesLoading } = useQuery<Course[]>({
     queryKey: ["/api/courses"],
@@ -31,6 +39,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={language === "sq" ? "MsoSTEM - Mëso Programim & Gjej Bursa për Vajzat e Reja" : "MsoSTEM - Learn Programming & Find Scholarships for Young Women"}
+        description={language === "sq" ? "Fuqizo udhëtimin tënd në teknologji me MsoSTEM. Kurse interaktive kodimi në HTML dhe CSS, bursa të vërteta, dhe komunitet mbështetës për vajzat e reja që mësojnë të kodojnë." : "Empower your tech journey with MsoSTEM. Interactive coding courses in HTML and CSS, real scholarships, and supportive community for young women learning to code."}
+        keywords={language === "sq" ? "kodim, programim, HTML, CSS, bursa, vajza në teknologji, arsim STEM, kurse teknologjie" : "coding, programming, HTML, CSS, scholarships, women in tech, STEM education, tech courses, girls who code"}
+        canonicalUrl="https://msostem.replit.app"
+      />
+      <OrganizationSchema />
+      <WebsiteSchema />
+      <FAQSchema questions={faqQuestions} />
       <Navbar />
       <HeroSection />
       

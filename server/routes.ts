@@ -176,6 +176,100 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // SEO: Sitemap.xml
+  app.get("/sitemap.xml", async (req, res) => {
+    try {
+      const baseUrl = "https://msostem.replit.app";
+      const blogPosts = await storage.getBlogPosts();
+      const courses = await storage.getCourses();
+      const scholarships = await storage.getScholarships();
+      
+      const staticPages = [
+        { url: "/", priority: "1.0", changefreq: "weekly" },
+        { url: "/courses", priority: "0.9", changefreq: "weekly" },
+        { url: "/scholarships", priority: "0.9", changefreq: "weekly" },
+        { url: "/playground", priority: "0.8", changefreq: "monthly" },
+        { url: "/about", priority: "0.7", changefreq: "monthly" },
+        { url: "/blog", priority: "0.9", changefreq: "daily" },
+      ];
+
+      let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+`;
+
+      // Static pages
+      for (const page of staticPages) {
+        sitemap += `  <url>
+    <loc>${baseUrl}${page.url}</loc>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>
+`;
+      }
+
+      // Blog posts
+      for (const post of blogPosts) {
+        const lastmod = post.createdAt ? new Date(post.createdAt).toISOString().split('T')[0] : new Date().toISOString().split('T')[0];
+        sitemap += `  <url>
+    <loc>${baseUrl}/blog/${post.slug}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+      }
+
+      // Course pages
+      for (const course of courses) {
+        sitemap += `  <url>
+    <loc>${baseUrl}/course/${course.id}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+      }
+
+      // Scholarship pages
+      for (const scholarship of scholarships) {
+        sitemap += `  <url>
+    <loc>${baseUrl}/scholarships/${scholarship.id}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+`;
+      }
+
+      sitemap += `</urlset>`;
+
+      res.header("Content-Type", "application/xml");
+      res.send(sitemap);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to generate sitemap" });
+    }
+  });
+
+  // SEO: robots.txt
+  app.get("/robots.txt", (req, res) => {
+    const robotsTxt = `# robots.txt for MsoSTEM
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://msostem.replit.app/sitemap.xml
+
+# Crawl-delay (optional, for well-behaved bots)
+Crawl-delay: 1
+
+# Disallow admin/api paths from indexing
+Disallow: /api/
+`;
+    res.header("Content-Type", "text/plain");
+    res.send(robotsTxt);
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
